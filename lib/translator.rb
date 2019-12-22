@@ -23,6 +23,7 @@ end
 def get_japanese_emoticon(path, english_emoticon)
   # code goes here
   library = load_library(path)
+  return "Sorry, that emoticon was not found" if !library[:get_emoticon][english_emoticon]
   japanese_emoticon = library[:get_emoticon][english_emoticon]
 end
 
