@@ -11,7 +11,8 @@ def load_library(path)
   emoticons = YAML.load_file(path)
   pp emoticons
   emoticons.each do |key, value|
-    
+    japanese_emoticon = vaule[1]
+    result[:get_meaning][japanese_emoticon] = key
   end
   result
 end
