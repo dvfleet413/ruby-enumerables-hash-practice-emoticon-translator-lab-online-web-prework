@@ -9,14 +9,14 @@ def load_library(path)
     :get_emoticon => {}
   }
   emoticons = YAML.load_file(path)
-  pp emoticons
-  
+
   emoticons.each do |key, value|
     english_emoticon = value[0]
     japanese_emoticon = value[1]
     result[:get_meaning][japanese_emoticon] = key
     result[:get_emoticon][english_emoticon] = japanese_emoticon
   end
+  
   result
 end
 
